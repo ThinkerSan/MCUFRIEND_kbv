@@ -1,30 +1,34 @@
-#MCUFRIEND_kbv 
-Library for Uno 2.4, 2.8, 3.5, 3.6, 3.95 inch mcufriend  Shields
+# MCUFRIEND_kbv
 
-1. The Arduino Library Manager should find and install MCUFRIEND_kbv library
+Библиотека для mcufriend шилдов с дисплеями 2.4, 2.8, 3.5, 3.6, 3.95 дюймов под Arduino UNO
 
-2. Install the Adafruit_GFX library if not already in your User libraries.
+1. Через Менеджер библиотек в Arduino IDE нужно найти и установить библиотеку MCUFRIEND_kbv (не находит в последнее время, поэтому устанавливать придётся вручную.)
 
-3. Insert your Mcufriend style display shield into UNO.   Only 28-pin shields are supported.
+2. Установите библиотеку Adafruit_GFX, если она еще не установлена.
 
-4. Build any of the Examples from the File->Examples->Mcufriend_kbv menu.  e.g.
+3. Вставьте в Arduino UNO mcufriend шильд с дисплеем. Поддерживаются только 28-выводные экраны.
 
-graphictest_kbv.ino: shows all the methods.
+4. Соберите любой из примеров из меню Файл->Примеры->Mcufriend_kbv. Например:
 
-LCD_ID_readreg.ino:  diagnostic check to identify unsupported controllers.
+    - graphictest_kbv.ino: показывает все методы.
+    - LCD_ID_readreg.ino:  диагностическая проверка для выявления неподдерживаемых контроллеров.
 
-MCUFRIEND_kbv inherits all the methods from 
-the Adafruit_GFX class: https://learn.adafruit.com/adafruit-gfx-graphics-library/overview 
-and Print class: https://www.arduino.cc/en/Serial/Print
+MCUFRIEND_kbv наследует все методы из классов:
 
-The only "new" methods are hardware related: 
-vertScroll(), readGRAM(), readPixel(), setAddrWindow(), pushColors(), readID(), begin()
+- `Adafruit_GFX`: <https://learn.adafruit.com/adafruit-gfx-graphics-library/overview>
+- `Print`: <https://www.arduino.cc/en/Serial/Print>
 
-readReg(), pushCommand() access the controller registers
+Единственные "новые" методы связаны с оборудованием:
+`vertScroll()`, `readGRAM()`, `readPixel()`, `setAddrWindow()`, `pushColors()`, `readID()`, `begin()`
 
-The File layout changed with v2.9.3.   If replacing a pre-v2.9.3 library:
-Please leave IDE.  Delete the existing MCUFRIEND_kbv folder.  Start the IDE.  Install from Library Manager.
+`readReg()`, `pushCommand()`, `WriteCmdData()` получают доступ к регистрам контроллера
 
-HOW TO INSTALL AND USE: is now in "mcufriend_how_to.txt"
+Расположение файла изменилось с версией 2.9.3. При замене библиотеки, существовавшей до версии 2.9.3 необходимо:
 
-CHANGE HISTORY:         is now in "mcufriend_history.txt"
+- Выйти из Arduino IDE.
+- Удалить существующую папку MCUFRIEND_kbv.
+- Запустить IDE. Установить билиотеку заново из менеджера библиотек.
+
+КАК УСТАНОВИТЬ И ИСПОЛЬЗОВАТЬ теперь находится в файле [mcufriend_how_to.txt](extras/mcufriend_how_to.txt)
+
+ИСТОРИЯ ИЗМЕНЕНИЙ теперь находится в файле [mcufriend_history.txt](extras/mcufriend_history.txt)
