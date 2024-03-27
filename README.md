@@ -29,6 +29,6 @@ MCUFRIEND_kbv наследует все методы из классов:
 - Удалить существующую папку MCUFRIEND_kbv.
 - Запустить IDE. Установить билиотеку заново из менеджера библиотек.
 
-КАК УСТАНОВИТЬ И ИСПОЛЬЗОВАТЬ теперь находится в файле [mcufriend_how_to.txt](extras/mcufriend_how_to.md)
+Руководство по установке и использованию библиотеки теперь находится в файле [mcufriend_how_to.md](extras/mcufriend_how_to.md)
 
 ИСТОРИЯ ИЗМЕНЕНИЙ теперь находится в файле [mcufriend_history.txt](extras/mcufriend_history.txt)

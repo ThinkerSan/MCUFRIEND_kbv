@@ -16,7 +16,7 @@
 
 8. Приведенные примеры являются стандартными для Adafruit. Вы можете просмотреть мои изменения, выполнив поиск по "kbv".
 
-9. Any Adafruit sketch should work with the MCUFRIEND_kbv constructor() but should allow extra ID values.  Конструктор Adafruit(cs, rs, wr, rd, rst) ИГНОРИРУЕТ любые аргументы. т.е. использует только выводы управления шилдом.
+9. Любой скетч Adafruit должен работать с конструктором MCUFRIEND_kbv, но должен принимать дополнительные значения ID.  Конструктор Adafruit(cs, rs, wr, rd, rst) ИГНОРИРУЕТ любые аргументы. т.е. использует только выводы управления шилдом.
 
 MCUFRIEND_kbv наследует все методы из классов:
 
@@ -32,22 +32,22 @@ MCUFRIEND_kbv наследует все методы из классов:
 | Контроллер | Разрешение | Идентификатор | Примечание |
 | ------ | ------- | --------- | --- |
 | GC9302   | 240x320  | ID=0x9302 |     |
-| HX8347-A | 240x320  | ID=0x8347 | #define SUPPORT_8347A *** Не тестирован *** |
-| HX8347-D | 240x320  | ID=0x4747 | #define SUPPORT_8347D |
-| HX8347-G | 240x320  | ID=0x7575 | #define SUPPORT_8347D |
-| HX8347-I | 240x320  | ID=0x9595 | #define SUPPORT_8347D |
-| HX8352-A | 240x400  | ID=0x5252 | #define SUPPORT_8352A |
-| HX8352-B | 240x400  | ID=0x0065 | #define SUPPORT_8352B |
-| HX8357-B | 320x480  | ID=0x8357 | (shares init with 8357-D) |
-| HX8357-C | 320x480  | ID=0x9090 | (Идентификатор изменился с 0x8357) |
-| HX8357-D | 320x480  | ID=0x0099 | #define SUPPORT_8357D_GAMMA |
-| HX8367-A | 240x320  | ID=0x6767 | #define SUPPORT_8347D |
-| ILI9163  | 128x160  | ID=0x9163 | #define SUPPORT_9163 |
-| ILI9225  | 176x220  | ID=0x9225 | #define SUPPORT_9225 |
-| ILI9226  | 176x220  | ID=0x9226 | #define SUPPORT_9225 |
+| HX8347-A | 240x320  | ID=0x8347 | `#define SUPPORT_8347A` ***Не тестирован*** |
+| HX8347-D | 240x320  | ID=0x4747 | `#define SUPPORT_8347D` |
+| HX8347-G | 240x320  | ID=0x7575 | `#define SUPPORT_8347D` |
+| HX8347-I | 240x320  | ID=0x9595 | `#define SUPPORT_8347D` |
+| HX8352-A | 240x400  | ID=0x5252 | `#define SUPPORT_8352A` |
+| HX8352-B | 240x400  | ID=0x0065 | `#define SUPPORT_8352B` |
+| HX8357-B | 320x480  | ID=0x8357 | (общий с 8357-D процесс инициализации) |
+| HX8357-C | 320x480  | ID=0x9090 | (Идентификатор изменился с `0x8357`) |
+| HX8357-D | 320x480  | ID=0x0099 | `#define SUPPORT_8357D_GAMMA` |
+| HX8367-A | 240x320  | ID=0x6767 | `#define SUPPORT_8347D` |
+| ILI9163  | 128x160  | ID=0x9163 | `#define SUPPORT_9163` |
+| ILI9225  | 176x220  | ID=0x9225 | `#define SUPPORT_9225` |
+| ILI9226  | 176x220  | ID=0x9226 | `#define SUPPORT_9225` |
 | ILI9320  | 240x320  | ID=0x9320 |  |
 | ILI9325  | 240x320  | ID=0x9325 |  |
-| ILI9326  | 240x400  | ID=0x9326 | #define SUPPORT_9326_5420 |
+| ILI9326  | 240x400  | ID=0x9326 | `#define SUPPORT_9326_5420` |
 | ILI9327  | 240x400  | ID=0x9327 |  |
 | ILI9328  | 240x320  | ID=0x9328 |  |
 | ILI9329  | 240x320  | ID=0x9329 |  |
@@ -56,46 +56,46 @@ MCUFRIEND_kbv наследует все методы из классов:
 | ILI9338  | 240x320  | ID=0x9338 |  |
 | ILI9340  | 240x320  | ID=0x9340 |  |
 | ILI9341  | 240x320  | ID=0x9341 |  |
-| ILI9342  | 320x240  | ID=0x9342 | #define SUPPORT_9342 |
+| ILI9342  | 320x240  | ID=0x9342 | `#define SUPPORT_9342` |
 | ILI9481  | 320x480  | ID=0x9481 |  |
 | ILI9486  | 320x480  | ID=0x9486 |  |
 | ILI9487  | 320x480  | ID=0x9487 |  |
-| ILI9488  | 320x480  | ID=0x9488 | (weird 555 display :#define SUPPORT_9488_555) |
-| LGDP4532 | 240x320  | ID=0x4532 | #define SUPPORT_4532 |
-| LGDP4535 | 240x320  | ID=0x4535 | #define SUPPORT_4535 |
-| NT35310  | 320x480  | ID=0x5310 | (hardware must be set for 8-bit parallel) |
-| NT35702  | 240x320  | ID=0x1602 | no readGRAM() or readPixel() |
-| R61505   | 240x320  | ID=0x1505 | works like an ILI9320 |
+| ILI9488  | 320x480  | ID=0x9488 | (странный дисплей 555: `#define SUPPORT_9488_555`) |
+| LGDP4532 | 240x320  | ID=0x4532 | `#define SUPPORT_4532` |
+| LGDP4535 | 240x320  | ID=0x4535 | `#define SUPPORT_4535` |
+| NT35310  | 320x480  | ID=0x5310 | (аппаратное обеспечение должно быть настроено на 8-битную параллельную шину) |
+| NT35702  | 240x320  | ID=0x1602 | не работает `readGRAM()` или `readPixel()` |
+| R61505   | 240x320  | ID=0x1505 | работает как ILI9320 |
 | R61505V  | 240x320  | ID=0xB505 |  |
 | R61505W  | 240x320  | ID=0xC505 |  |
-| R61509V  | 240x400  | ID=0xB509 | #define SUPPORT_B509_7793 |
-| R61520   | 240x320  | ID=0x1520 | (no Vertical Scroll) |
-| R61526A  | 240x320  | ID=0x1526 | (no Vertical Scroll) configure NVM with sketch |
-| R61580   | 240x320  | ID=0x1580 | #define SUPPORT_1580 *** Не тестирован *** |
+| R61509V  | 240x400  | ID=0xB509 | `#define SUPPORT_B509_7793` |
+| R61520   | 240x320  | ID=0x1520 | (нет вертикальной прокрутки) |
+| R61526A  | 240x320  | ID=0x1526 | (нет вертикальной прокрутки) настройте NVM с помощью скетча |
+| R61580   | 240x320  | ID=0x1580 | `#define SUPPORT_1580` ***Не тестирован*** |
 | R61581   | 320x480  | ID=0x1581 |  |
 | RM68090  | 240x320  | ID=0x6809 |  |
-| RM68130  | 176x220  | ID=0x6813 | #define SUPPORT_9225 |
-| RM68140  | 320x480  | ID=0x6814 | #define SUPPORT_68140 |
-| S6D0139  | 240x320  | ID=0x0139 | #define SUPPORT_0139 (no Band Scroll) |
-| S6D0154  | 240x320  | ID=0x0154 | #define SUPPORT_0154 |
+| RM68130  | 176x220  | ID=0x6813 | `#define SUPPORT_9225` |
+| RM68140  | 320x480  | ID=0x6814 | `#define SUPPORT_68140` |
+| S6D0139  | 240x320  | ID=0x0139 | `#define SUPPORT_0139` (нет прокрутки полосы) |
+| S6D0154  | 240x320  | ID=0x0154 | `#define SUPPORT_0154` |
 | SPFD5408 | 240x320  | ID=0x5408 |  |
-| SPFD5420 | 240x400  | ID=0x5420 | #define SUPPORT_9326_5420 |
+| SPFD5420 | 240x400  | ID=0x5420 | `#define SUPPORT_9326_5420` |
 | SSD1963  | 800x480  | ID=0x1963 |  |
-| SSD1289  | 240x320  | ID=0x1289 | #define SUPPORT_1289 |
-| SSD1297  | 240x320  | ID=0x9797 | #define SUPPORT_1289 (unstable readGRAM()) |
-| ST7735   | 128x160  | ID=0x7735 | #define SUPPORT_7735 (Не тестирован) |
-| ST7781   | 240x320  | ID=0x7783 | #define SUPPORT_7781 (no Vertical Scroll) |
+| SSD1289  | 240x320  | ID=0x1289 | `#define SUPPORT_1289` |
+| SSD1297  | 240x320  | ID=0x9797 | `#define SUPPORT_1289` (нестабильно выполняет функцию `readGRAM()`) |
+| ST7735   | 128x160  | ID=0x7735 | `#define SUPPORT_7735` (***Не тестирован***) |
+| ST7781   | 240x320  | ID=0x7783 | `#define SUPPORT_7781` (нет вертикальной прокрутки) |
 | ST7789V  | 240x320  | ID=0x7789 |  |
-| ST7793   | 240x400  | ID=0x7793 | #define SUPPORT_B509_7793 |
+| ST7793   | 240x400  | ID=0x7793 | `#define SUPPORT_B509_7793` |
 | ST7796   | 320x480  | ID=0x7796 |  |
-| UC8230   | 240x320  | ID=0x8230 | #define SUPPORT_8230 |
-| UNKNOWN  | 320x480  | ID=0x1511 | (scroll directions not correct) |
+| UC8230   | 240x320  | ID=0x8230 | `#define SUPPORT_8230` |
+| UNKNOWN  | 320x480  | ID=0x1511 | (неверные направления прокрутки) |
 | UNKNOWN  | 240x320  | ID=0xAC11 |  |
-| UNKNOWN  | 240x320  | ID=0x2053 | weird controller from BangGood (was ID=0x0000) |
-| UNKNOWN  | 240x320  | ID=0x8031 | (no Vertical Scroll) |
-| UNKNOWN  | 240x320  | ID=0x0001 | (0x9320 style) |
-| UNKNOWN  | 240x320  | ID=0x3229 | readGRAM() does not work properly. NEED DATASHEET. |
-| UNKNOWN  | 240x320  | ID=0xE300 | weird controller from BangGood. NEED DATASHEET |
+| UNKNOWN  | 240x320  | ID=0x2053 | странный контроллер от BangGood (был `ID=0x0000`) |
+| UNKNOWN  | 240x320  | ID=0x8031 | (нет вертикальной прокрутки) |
+| UNKNOWN  | 240x320  | ID=0x0001 | (похож на  `0x9320`) |
+| UNKNOWN  | 240x320  | ID=0x3229 | Функция `readGRAM()` не работает должным образом. **НУЖЕН ТЕХНИЧЕСКИЙ ПАСПОРТ**. |
+| UNKNOWN  | 240x320  | ID=0xE300 | странный контроллер от BangGood **НУЖЕН ТЕХНИЧЕСКИЙ ПАСПОРТ** |
 
 Большинство из этих контроллеров по умолчанию имеют определения (`#define SUPPORT_xxxx`).
 Вы можете сэкономить флэш-память на Uno, закомментировав ненужные макрос(ы) в MCUFRIEND_kbv.cpp
@@ -118,44 +118,48 @@ ILI9320 всегда будет перемещать весь экран.<br>
 
 15. The [readpixel_kbv.ino](../examples/readpixel_kbv/readpixel_kbv.ino) sketch should display memory in each aspect.
 
-16. The [GLUE_Demo_320x240.ino](../examples/GLUE_Demo_320x240/GLUE_Demo_320x240.ino) sketch uses a "GLUE" class to display a UTFT sketch on supported mcufriend shields.<br>
-It is NOT perfect.   Please report any problems. It is designed as a CONVENIENCE for legacy UTFT code.<br>
-Please use MCUFRIEND_kbv method()s in new code.
+16. Скетч [GLUE_Demo_320x240.ino](../examples/GLUE_Demo_320x240/GLUE_Demo_320x240.ino) использует класс "GLUE" для отображения скетча UTFT на поддерживаемых экранах mcufriend.<br>
+Он не идеален. Пожалуйста, сообщайте о любых проблемах. Он разработан для удобства использования устаревшего кода UTFT.<br>
+Пожалуйста, используйте метод MCUFRIEND_kbv() при написании нового кода.
 
 17. Если у вас не стандартный шилд для Uno, вы можете добавить SPECIAL определение в mcufriend_special.h
     - Отредактируйте mcufriend_shield.h:  #define USE_SPECIAL
-    - Отредактируйте mcufriend_special.h: например #define USE_MEGA_16BIT_SHIELD<br>
-    Если ваш "специальный" доступен только для записи, библиотека не сможет прочитать идентификатор и всегда возвращает `0xD3D3`
+    - Отредактируйте mcufriend_special.h: например #define USE_MEGA_16BIT_SHIELD
+    Если ваш "специальный" шилд доступен только для записи, библиотека не сможет прочитать идентификатор и всегда возвращает `0xD3D3`
 
 18. Запустите файл [LCD_ID_readreg.ino](../examples/LCD_ID_readreg/LCD_ID_readreg.ino) для проверки нестандартного подключения.  Вставьте определение в сообщение на форуме.
 
-19. Шилды OPEN-SMART имеют другую разводку, чем обычные шилды для Uno:<br>
+19. Шилды OPEN-SMART имеют другую разводку, чем обычные шилды для Uno:
     - Отредактируйте utility/mcufriend_shield.h: `#define USE_SPECIAL`
     - Отредактируйте utility/mcufriend_special.h: #define USE_OPENSMART_SHIELD_PINOUT_xxx например `USE_OPENSMART_SHIELD_PINOUT_MEGA`
     - Отредактируйте MCUFRIEND_kbv.cpp: `#define SUPPORT_8352B`
 
-20. OPEN-SMART Shields can not read LM75A on a Mega because there are no SDA/SCL pins next on AREF header.<br>
-    - Uno:  LM75A on pcb works.  Difficult to add external I2C devices when Shield is plugged in.
-    - Uno:  All use of SPI bus should use SPI.beginTransaction(), SPI.endTransaction()
-    - Leo:  I do not support USE_OPENSMART_SHIELD_PINOUT_LEO
-    - Mega: Old boards do not have SDA/SCL on AREF header.   - Only external I2C devices on COMMS header
-    - Due:  MAX809 Reset chip interferes with 3.3V RST on SPI header.  Manual reset for Upload / Run.
+20. Шилды OPEN-SMART не могут считывать LM75A на Mega, потому что рядом с разъемом AREF нет выводов SDA/SCL.
+    - Uno:  LM75A на печатной плате работает. Сложно добавить внешние устройства I2C, когда подключен шилд.
+    - Uno:  При любом использовании шины SPI следует использовать `SPI.beginTransaction()`, `SPI.endTransaction()`
+    - Leo:  Я не поддерживаю `USE_OPENSMART_SHIELD_PINOUT_LEO`
+    - Mega: Старые платы не имеют **SDA/SCL** на разъёме **AREF**. Только внешние устройства I2C на разъеме **COMMS**
+    - Due:  Микросхема сброса MAX809 создает помехи при подаче напряжения 3,3В RST на разъем SPI. Используйте ручной сброс для загрузки/запуска.
 
-21. BLUEPILL Adapter standard wiring is:
-    //LCD pins  |D7 |D6 |D5 |D4 |D3 |D2 |D1 |D0 | |RD |WR |RS |CS |RST| |SD_SS|SD_DI|SD_DO|SD_SCK|<br>
-    //STM32 pin |PA7|PA6|PA5|PA4|PA3|PA2|PA1|PA0| |PB0|PB6|PB7|PB8|PB9| |PA15 |PB5  |PB4  |PB3   | **ALT-SPI1**<br>
+21. Стандартная разводка адаптера BLUEPILL - это:
+    | выводы LCD   | D7  | D6  | D5  |D4  | D3  | D2  | D1  | D0  |   | RD  | WR  | RS  | CS  | RST |   | SD_SS | SD_DI | SD_DO | SD_SCK |
+    | ------------ | --- | --- | --- | -- | --- | --- | --- | --- | - | --- | --- | --- | --- | --- | - | ---   | ---   | ---   | ---    |
+    |выводы STM32  | PA7 | PA6 | PA5 |PA4 | PA3 | PA2 | PA1 | PA0 |   | PB0 | PB6 | PB7 | PB8 | PB9 |   | PA15  | PB5   | PB4   | PB3    |
 
-    Maple core:  to use SPI2 for SPI. edit SPI.cpp for SPIClass SPI(2);<br>
-    STM Core:    to use SPI2 for SPI. edit variant.h to use PA15, PB3, PB4, PB5 for SPI_SS etc
+    **ALT-SPI1**
 
-    Touchscreen needs XM, YP to be on Analog capable pins.  Measure resistance with DMM to determine X, Y
-    300R pair is XP, XM.  500R pair is YP, YM.  choose XM, YP from PA7, PA6.  XP, YM from PB6, PB7
-    Run the Calibration sketch to get accurate TS_LEFT, TS_RT, TS_TOP, TS_BOT values.
-    Ignore the XP, XM, ... values.   They mean nothing on a BluePill
+    - Ядро Maple:  чтобы использовать SPI2 для SPI. отредактируйте SPI.cpp `SPIClass SPI(2);`
+    - Ядро STM:    чтобы использовать SPI2 для SPI. отредактируйте variant.h используя **PA15**, **PB3**, **PB4**, **PB5** для ***SPI_SS*** и т.д.
 
-    Adafruit_Touchscreen might need: typedef volatile uint32_t RwReg;
+    Контакты **XM** и **YP** сенсорного экрана должны быть подключёны к выводам, поддерживающим аналоговые сигналы.<br>
+    Измерьте сопротивление с помощью цифрового мультиметра, чтобы определить выводы X, Y. Между выводами XP и XM сопротивление составит порядка **300 Ом**, а между выводами YP и YM - **500 Ом**.<br>
+    Назначьте выводы XM и YP на PA7 и PA6, а XP и YM на PB6 и PB7 соответственно.<br>
+    Запустите скетч калибровки, чтобы получить точные значения TS_LEFT, TS_RT, TS_TOP, TS_BOT.<br>
+    Игнорируйте значения XP, XM, .... Они ничего не значат для BluePill
 
-    Maple core:  use Touchscreen_kbv library
-    STM Core:    regular Touchscreen libraries should be ok.
+    Adafruit_Touchscreen может потребоваться тип данных: `typedef volatile uint32_t RwReg`;
 
-    ИСТОРИЯ ИЗМЕНЕНИЙ теперь находится в файле "mcufriend_history.txt"
+    - Ядро Maple:  используйте билиотеку Touchscreen_kbv
+    - Ядро STM:    нормально работает обычная библиотека Touchscreen.
+
+    ИСТОРИЯ ИЗМЕНЕНИЙ теперь находится в файле [mcufriend_history.txt](mcufriend_history.txt)
